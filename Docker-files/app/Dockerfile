@@ -1,5 +1,4 @@
 FROM openjdk:11 AS BUILD_IMAGE
-FROM tomcat:9-jre11
 RUN apt update && apt install maven -y
 RUN git clone https://github.com/ntakla/vprofile-project.git
 RUN cd vprofile-project && git checkout docker && mvn install
